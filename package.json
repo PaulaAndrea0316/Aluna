@@ -1,0 +1,24 @@
+{
+  "name": "aluna",
+  "version": "1.0.0",
+  "description": "Tienda virtual  de productos hechos a mano ",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PaulaAndrea0316/Aluna.git"
+  },
+  "author": "Grupo Colaborativo 10",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PaulaAndrea0316/Aluna/issues"
+  },
+  "homepage": "https://github.com/PaulaAndrea0316/Aluna#readme",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "mongoose": "^7.4.5"
+  }
+}
