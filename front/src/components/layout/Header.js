@@ -3,14 +3,14 @@ import React, { Fragment } from 'react'
 const Header = () => {
   return (
     <Fragment>
-      <nav className="navbar row">
-        <div className="col-12 col-md-3">
+      <nav className='navbar row'>
+        <div className='col-12 col-md-3'>
             <div className='navbar-brand'>
                 <img src="./images/Aluna.png" alt="Aluna Store Logo"></img>
             </div>
         </div>
 
-        <div className='col-12 col-md-5 mt-2 mt-md-0'>
+        <div className='col-12 col-md-6 mt-2 mt-md-0'>
             <div className = "input-group">
                 <input
                     type= "text"
