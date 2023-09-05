@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment } from "react"
 
 const Footer = () => {
   return (
@@ -9,7 +9,7 @@ const Footer = () => {
         </p>
       </Footer>
     </Fragment>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer
