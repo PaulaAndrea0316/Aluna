@@ -1,12 +1,21 @@
-import './App.css';
-import React from 'react';
+import "./App.css";
+import React from "react";
+import Header from "./components/layout/Header";
+import Footer from "./components/layout/Footer";
 
 function App() {
   return (
     <div className="App">
-      <h1>Tienda Aluna</h1>
-      <img src = "./images/Aluna.png" alt = "Aqui va el logo"></img>
-  
+      <Header />
+      <center>Contenido Aqui</center>
+      <center>Contenido Aqui</center>
+      <center>Contenido Aqui</center>
+      <center>Contenido Aqui</center>
+      <center>Contenido Aqui</center>
+      <center>Contenido Aqui</center>
+      <center>Contenido Aqui</center>
+      <center>Contenido Aqui</center>
+      <Footer />
     </div>
   );
 }
