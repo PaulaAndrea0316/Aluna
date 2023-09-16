@@ -40,8 +40,8 @@ const Home = () => {
                 <h5 id="titulo_producto">
                   <Link to={`/producto/${producto._id}`}>{producto.nombre}</Link></h5>
                 <div className="rating mt-auto">
-                  <div className="rating-outer"></div>
-                  <div className="rating-inner" style={{ width: `${(producto.calificacion/5)* 100}%`}}></div>
+                  <div className="rating-outer">
+                  <div className='rating-inner' style={{ width: `${(producto.calificacion / 5) * 100}%` }}></div>
                 </div>
                 <span id="No_de_opiniones">{producto.numCalificaciones} Reviews</span>
               </div>
@@ -49,6 +49,7 @@ const Home = () => {
                 Ver detalle 
               </Link>
             </div>
+          </div>
           </div>
           ))}
         </div>
