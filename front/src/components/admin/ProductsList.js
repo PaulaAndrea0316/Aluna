@@ -49,12 +49,12 @@ const ProductsList = () => {
 
             rows: []
          }
-         productos.forEach(productos =>{
+         productos.forEach(product =>{
             data.rows.push ({
-                nombre: productos.nombre,
-                precio: `$${productos.precio}`,
-                inventario: productos.inventario,
-                vendedor: productos.vendedor,
+                nombre: product.nombre,
+                precio: `$${product.precio}`,
+                inventario: product.inventario,
+                vendedor: product.vendedor,
             })
          })
         return data; 
