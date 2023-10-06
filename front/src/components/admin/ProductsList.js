@@ -5,6 +5,7 @@ import { useAlert } from 'react-alert'
 import Sidebar from './Sidebar';
 import { MDBDataTable } from 'mdbreact'
 import MetaData from '../layout/MetaData'
+import { Link } from 'react-router-dom'
 
 
 const ProductsList = () => {
@@ -45,6 +46,11 @@ const ProductsList = () => {
                 sort: 'asc'
             },
 
+            {
+                label: 'Acciones',
+                field: 'acciones',
+            },
+
             ],
 
             rows: []
@@ -55,6 +61,21 @@ const ProductsList = () => {
                 precio: `$${product.precio}`,
                 inventario: product.inventario,
                 vendedor: product.vendedor,
+
+                acciones: <Fragment>
+                <Link to={`/producto/${product._id}`} className="btn btn-primary py-1 px-2">
+                    <i className="fa fa-eye"></i>
+                </Link><Link to={`/updateProduct/${product._id}`} className="btn btn-warning py-1 px-2">
+                <i class="fa fa-pencil"></i>
+                </Link>
+
+                <button className="btn btn-danger py-1 px-2 ml-2" onClick={() =>(product._id)}>
+                    <i className="fa fa-trash"></i>
+                </button>
+            </Fragment>
+
+
+
             })
          })
         return data; 
