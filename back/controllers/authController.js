@@ -224,6 +224,22 @@ exports.updateUser= catchAsyncErrors (async(req, res, next)=>{
         success:true,
         user
     })
-
 })
+
+//Eliminar usuario (admin)
+exports.deleteUser= catchAsyncErrors (async (req, res, next)=>{
+    const user = await User.findById(req.params.id);
+
+    if(!user){
+        return next(new ErrorHandler(`Usuario con id: ${req.params.id} 
+        no se encuentra en nuestra base de datos`))
+    }
+
+    await user.deleteOne();
+
+    res.status(200).json({
+        success:true,
+        message:"Usuario eliminado correctamente"
+    })
+})  
 
