@@ -4,17 +4,17 @@ const ErrorHandler = require("../utils/errorHandler");
 const fetch = (url) => import('node-fetch').then(({ default: fetch }) => fetch(url)); //Usurpación del require
 const APIFeatures = require("../utils/apiFeatures");
 
-//Ver la lista de productos
-exports.getProducts = catchAsyncErrors( async (req, res, next) => {
 
-// Paginacion y filtros 
-  const resPerPage = 3;
+//Ver la lista de productos
+exports.getProducts = catchAsyncErrors(async (req, res, next) => {
+
+  // paginacion y filtros 
+  const resPerPage = 4;
   const productsCount = await producto.countDocuments();
 
   const apiFeatures = new APIFeatures(producto.find(), req.query)
-  .search()
-  .filter();
-   
+      .search()
+      .filter();
 
   let products = await apiFeatures.query;
   let filteredProductsCount= products.length;
@@ -22,23 +22,13 @@ exports.getProducts = catchAsyncErrors( async (req, res, next) => {
   products = await apiFeatures.query.clone();
 
   res.status(200).json({
-    success: true,
-        productsCount,
-        resPerPage,
-        filteredProductsCount,
-        products
+      success: true,
+      productsCount,
+      resPerPage,
+      filteredProductsCount,
+      products
   })
 
-  const productos = await producto.find();
-  if (!productos) {
-    return next(new ErrorHandler("Información no encontrada", 404))
-}
-
-  res.status(200).json({
-    success: true,
-    cantidad: productos.length,
-    productos,
-  })
 })
 
 //Ver un producto por ID
