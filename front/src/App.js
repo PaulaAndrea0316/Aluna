@@ -22,6 +22,7 @@ function App() {
           <Route path="/producto/:id" element={<ProductDetails />}/>
           <Route path="/dashboard" element={<Dashboard />}/>
           <Route path="/productList" element={<ProductsList />}/>
+          <Route path="/search/:keyword" element={<Home />} />
         </Routes>
       </div>
       <Footer />
