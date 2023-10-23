@@ -38,13 +38,10 @@ const productosSchema=mongoose.Schema({
           required:[true,"Por favor seleccione la categoria del producto."],
           enum:{
               values:[
-                  "Telas Indias",
-                  "Fundas Cojín",
-                  "Porta Inciensos",
-                  "Pashminas",
-                  "Murtis",
-                  "Japamala",
-                  "Bisuteria"
+                  "Decoración del hogar",
+                  "Bisutería",
+                  "Implementos para Yoga y meditación",
+                  "Prendas de vestir y accesorios",
               ]
           }
     },
