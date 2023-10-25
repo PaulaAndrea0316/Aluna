@@ -32,7 +32,7 @@ nav {
 }
 
 #search_btn {
-  background-color: #febd69;
+  background-color: #c90d0d;
 }
 
 .input-group {
@@ -93,7 +93,7 @@ f
 }
 
 #view_btn {
-  background-color: #fa9c23;
+  background-color: #c90d0d;
   color: white;
 }
 
@@ -162,7 +162,7 @@ footer {
 #cart_btn,
 #review_btn {
   border-radius: 2rem;
-  background-color: #fa9c23;
+  background-color: #c90d0d;
   border: none;
   padding: 0.5rem 2rem;
 }
@@ -207,7 +207,7 @@ footer {
   height: 64px;
   margin: 8px;
   border-radius: 50%;
-  border: 6px solid #fa9c23;
+  border: 6px solid #c90d0d;
   border-color: #fa9c23 transparent;
   animation: lds-dual-ring 1.2s linear infinite;
 }
@@ -307,8 +307,8 @@ footer {
 }
 
 .wrapper form .btn {
-  background-color: #fa9c23;
-  border-color: #fa9c23;
+  background-color: #c90d0d;
+  border-color: #c90d0d;
   color: white;
   margin-top: 2.5rem;
 }
