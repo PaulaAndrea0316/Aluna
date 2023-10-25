@@ -468,8 +468,8 @@ footer {
 
 /* Pagination */
 .page-item.active .page-link {
-  background-color: #fa9c23;
-  border-color: #fa9c23;
+  background-color: #c90d0d;
+  border-color: #c90d0d;
 }
 
 .page-link {
