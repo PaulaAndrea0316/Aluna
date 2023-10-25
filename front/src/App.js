@@ -8,6 +8,7 @@ import { ProductDetails } from "./components/products/ProductDetails";
 import {BrowserRouter as Router, Routes,Route } from "react-router-dom";
 import Dashboard from "./components/admin/Dashboard";
 import ProductsList from "./components/admin/ProductsList";
+import Login from "./components/user/Login";
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
           <Route path="/dashboard" element={<Dashboard />}/>
           <Route path="/productList" element={<ProductsList />}/>
           <Route path="/search/:keyword" element={<Home />} />
+          <Route path="/login" element={<Login />} />
         </Routes>
       </div>
       <Footer />
