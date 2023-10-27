@@ -1,6 +1,6 @@
 import React, { Fragment,useEffect } from 'react'
 import {useDispatch, useSelector} from 'react-redux';
-import { getProducts } from "../../actions/productActions";
+import { clearErrors, getAdminProducts } from "../../actions/productActions";
 import { useAlert } from 'react-alert'
 import Sidebar from './Sidebar';
 import { MDBDataTable } from 'mdbreact'
@@ -8,19 +8,24 @@ import MetaData from '../layout/MetaData'
 import { Link } from 'react-router-dom'
 
 
+
 const ProductsList = () => {
-    const {loading,products,error} = useSelector (state => state.products)
     const alert = useAlert();
-
     const dispatch = useDispatch();
-    useEffect(()=>{
-    if (error) {
-      return alert.error(error)
-    }
 
-    dispatch(getProducts()); 
-    alert.success("OK")   
-  }, [dispatch])
+    const {loading,products,error} = useSelector (state => state.products)
+   
+
+    useEffect(() => {
+        dispatch(getAdminProducts());
+
+        if (error) {
+            alert.error(error);
+            dispatch(clearErrors())
+        }
+
+    }, [dispatch, alert, error])
+
 
   const setProducts = () => {
     const data = {
