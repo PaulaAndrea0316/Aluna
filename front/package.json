@@ -8,6 +8,7 @@
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.5.0",
     "cloudinary": "^1.41.0",
+    "express-fileupload": "^1.4.1",
     "mdbreact": "^5.2.0",
     "rc-slider": "^10.3.1",
     "react": "^18.2.0",
