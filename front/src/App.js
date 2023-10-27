@@ -9,6 +9,9 @@ import {BrowserRouter as Router, Routes,Route } from "react-router-dom";
 import Dashboard from "./components/admin/Dashboard";
 import ProductsList from "./components/admin/ProductsList";
 import Login from "./components/user/Login";
+import Register from "./components/user/Register";
+
+
 
 
 function App() {
@@ -25,6 +28,7 @@ function App() {
           <Route path="/productList" element={<ProductsList />}/>
           <Route path="/search/:keyword" element={<Home />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
         </Routes>
       </div>
       <Footer />
