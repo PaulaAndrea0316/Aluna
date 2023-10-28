@@ -8,8 +8,11 @@ import { ProductDetails } from "./components/products/ProductDetails";
 import {BrowserRouter as Router, Routes,Route } from "react-router-dom";
 import Dashboard from "./components/admin/Dashboard";
 import ProductsList from "./components/admin/ProductsList";
+import NewProduct from "./components/admin/NewProduct"
+
 import Login from "./components/user/Login";
 import Register from "./components/user/Register";
+
 
 
 
@@ -26,6 +29,7 @@ function App() {
           <Route path="/producto/:id" element={<ProductDetails />}/>
           <Route path="/dashboard" element={<Dashboard />}/>
           <Route path="/productList" element={<ProductsList />}/>
+          <Route path="/nuevoProducto" element={<NewProduct />} />
           <Route path="/search/:keyword" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />

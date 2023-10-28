@@ -7,10 +7,14 @@ import{
     PRODUCT_DETAILS_REQUEST,
     PRODUCT_DETAILS_SUCCESS,
     PRODUCT_DETAILS_FAIL,
+    CLEAR_ERRORS,
     ADMIN_PRODUCTS_REQUEST,
     ADMIN_PRODUCTS_SUCCESS,
     ADMIN_PRODUCTS_FAIL,
-    CLEAR_ERRORS
+    NEW_PRODUCT_REQUEST,
+    NEW_PRODUCT_SUCCESS,
+    NEW_PRODUCT_FAIL
+  
 } from '../constants/productConstants';
 
 export const getProducts = (currentPage=1,  keyword='', precio) => async(dispatch)=>{
@@ -53,6 +57,8 @@ export const getProductDetails = (id) => async(dispatch)=>{
     }
 }
 
+
+
 //ADMIN - get products
 export const getAdminProducts = () => async (dispatch) => {
     try {
@@ -70,7 +76,33 @@ export const getAdminProducts = () => async (dispatch) => {
             payload: error.response.data.message
         })
     }
-} 
+}
+
+
+//NUEVO PRODUCTO -ADMIN
+export const newProduct = ( productData ) => async (dispatch)=>{
+    try {
+        dispatch({type: NEW_PRODUCT_REQUEST})
+
+        const config ={ 
+            header: { 
+                'Content-Type':'application/json'
+            }
+        }
+
+        const {data} = await axios.post('/api/producto/nuevo', productData, config)
+
+        dispatch({
+            type: NEW_PRODUCT_SUCCESS,
+            payload: data
+        })
+    }catch(error){
+        dispatch({
+            type: NEW_PRODUCT_FAIL,
+            payload: error.response.data.message
+        })
+    }
+}
 
 //clear error
 export const clearErrors = () => async(dispatch)=>{
